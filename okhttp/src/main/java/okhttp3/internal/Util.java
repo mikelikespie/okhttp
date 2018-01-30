@@ -387,7 +387,10 @@ public final class Util {
     }
 
     try {
-      String result = IDN.toASCII(host).toLowerCase(Locale.US);
+      System.out.println("Canonicalizing host " + host);
+      //String meow = IDN.toASCII(host);
+      //System.out.println("Canonicalized host " + meow);
+      String result = host.toLowerCase(Locale.US);
       if (result.isEmpty()) return null;
 
       // Confirm that the IDN ToASCII result doesn't contain any illegal characters.
